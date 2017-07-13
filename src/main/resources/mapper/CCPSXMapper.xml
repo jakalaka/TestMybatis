@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Mapper.CCPSXMapper">
+  <resultMap id="BaseResultMap" type="Model.CCPSX">
+    <id column="FRDM_U" jdbcType="VARCHAR" property="frdmU" />
+    <id column="CPBH_U" jdbcType="VARCHAR" property="cpbhU" />
+    <result column="CPMC_U" jdbcType="VARCHAR" property="cpmcU" />
+    <result column="JFZQ_U" jdbcType="VARCHAR" property="jfzqU" />
+    <result column="QJJE_U" jdbcType="DECIMAL" property="qjjeU" />
+    <result column="XZKHJB" jdbcType="VARCHAR" property="xzkhjb" />
+    <result column="BZXX_U" jdbcType="VARCHAR" property="bzxxU" />
+    <result column="CJRQ_U" jdbcType="DATE" property="cjrqU" />
+    <result column="CJSJ_U" jdbcType="TIME" property="cjsjU" />
+    <result column="CJR_UU" jdbcType="VARCHAR" property="cjrUu" />
+    <result column="WHRQ_U" jdbcType="DATE" property="whrqU" />
+    <result column="WHSJ_U" jdbcType="TIME" property="whsjU" />
+    <result column="WHR_UU" jdbcType="VARCHAR" property="whrUu" />
+    <result column="SJC_UU" jdbcType="TIMESTAMP" property="sjcUu" />
+    <result column="JLZT_U" jdbcType="VARCHAR" property="jlztU" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    FRDM_U, CPBH_U, CPMC_U, JFZQ_U, QJJE_U, XZKHJB, BZXX_U, CJRQ_U, CJSJ_U, CJR_UU, WHRQ_U, 
+    WHSJ_U, WHR_UU, SJC_UU, JLZT_U
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="Model.CCPSXKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ccpsx
+    where FRDM_U = #{frdmU,jdbcType=VARCHAR}
+      and CPBH_U = #{cpbhU,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="Model.CCPSXKey">
+    delete from ccpsx
+    where FRDM_U = #{frdmU,jdbcType=VARCHAR}
+      and CPBH_U = #{cpbhU,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="Model.CCPSX">
+    insert into ccpsx (FRDM_U, CPBH_U, CPMC_U, 
+      JFZQ_U, QJJE_U, XZKHJB, 
+      BZXX_U, CJRQ_U, CJSJ_U, CJR_UU, 
+      WHRQ_U, WHSJ_U, WHR_UU, SJC_UU, 
+      JLZT_U)
+    values (#{frdmU,jdbcType=VARCHAR}, #{cpbhU,jdbcType=VARCHAR}, #{cpmcU,jdbcType=VARCHAR}, 
+      #{jfzqU,jdbcType=VARCHAR}, #{qjjeU,jdbcType=DECIMAL}, #{xzkhjb,jdbcType=VARCHAR}, 
+      #{bzxxU,jdbcType=VARCHAR}, #{cjrqU,jdbcType=DATE}, #{cjsjU,jdbcType=TIME}, #{cjrUu,jdbcType=VARCHAR}, 
+      #{whrqU,jdbcType=DATE}, #{whsjU,jdbcType=TIME}, #{whrUu,jdbcType=VARCHAR}, #{sjcUu,jdbcType=TIMESTAMP}, 
+      #{jlztU,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="Model.CCPSX">
+    insert into ccpsx
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="frdmU != null">
+        FRDM_U,
+      </if>
+      <if test="cpbhU != null">
+        CPBH_U,
+      </if>
+      <if test="cpmcU != null">
+        CPMC_U,
+      </if>
+      <if test="jfzqU != null">
+        JFZQ_U,
+      </if>
+      <if test="qjjeU != null">
+        QJJE_U,
+      </if>
+      <if test="xzkhjb != null">
+        XZKHJB,
+      </if>
+      <if test="bzxxU != null">
+        BZXX_U,
+      </if>
+      <if test="cjrqU != null">
+        CJRQ_U,
+      </if>
+      <if test="cjsjU != null">
+        CJSJ_U,
+      </if>
+      <if test="cjrUu != null">
+        CJR_UU,
+      </if>
+      <if test="whrqU != null">
+        WHRQ_U,
+      </if>
+      <if test="whsjU != null">
+        WHSJ_U,
+      </if>
+      <if test="whrUu != null">
+        WHR_UU,
+      </if>
+      <if test="sjcUu != null">
+        SJC_UU,
+      </if>
+      <if test="jlztU != null">
+        JLZT_U,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="frdmU != null">
+        #{frdmU,jdbcType=VARCHAR},
+      </if>
+      <if test="cpbhU != null">
+        #{cpbhU,jdbcType=VARCHAR},
+      </if>
+      <if test="cpmcU != null">
+        #{cpmcU,jdbcType=VARCHAR},
+      </if>
+      <if test="jfzqU != null">
+        #{jfzqU,jdbcType=VARCHAR},
+      </if>
+      <if test="qjjeU != null">
+        #{qjjeU,jdbcType=DECIMAL},
+      </if>
+      <if test="xzkhjb != null">
+        #{xzkhjb,jdbcType=VARCHAR},
+      </if>
+      <if test="bzxxU != null">
+        #{bzxxU,jdbcType=VARCHAR},
+      </if>
+      <if test="cjrqU != null">
+        #{cjrqU,jdbcType=DATE},
+      </if>
+      <if test="cjsjU != null">
+        #{cjsjU,jdbcType=TIME},
+      </if>
+      <if test="cjrUu != null">
+        #{cjrUu,jdbcType=VARCHAR},
+      </if>
+      <if test="whrqU != null">
+        #{whrqU,jdbcType=DATE},
+      </if>
+      <if test="whsjU != null">
+        #{whsjU,jdbcType=TIME},
+      </if>
+      <if test="whrUu != null">
+        #{whrUu,jdbcType=VARCHAR},
+      </if>
+      <if test="sjcUu != null">
+        #{sjcUu,jdbcType=TIMESTAMP},
+      </if>
+      <if test="jlztU != null">
+        #{jlztU,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="Model.CCPSX">
+    update ccpsx
+    <set>
+      <if test="cpmcU != null">
+        CPMC_U = #{cpmcU,jdbcType=VARCHAR},
+      </if>
+      <if test="jfzqU != null">
+        JFZQ_U = #{jfzqU,jdbcType=VARCHAR},
+      </if>
+      <if test="qjjeU != null">
+        QJJE_U = #{qjjeU,jdbcType=DECIMAL},
+      </if>
+      <if test="xzkhjb != null">
+        XZKHJB = #{xzkhjb,jdbcType=VARCHAR},
+      </if>
+      <if test="bzxxU != null">
+        BZXX_U = #{bzxxU,jdbcType=VARCHAR},
+      </if>
+      <if test="cjrqU != null">
+        CJRQ_U = #{cjrqU,jdbcType=DATE},
+      </if>
+      <if test="cjsjU != null">
+        CJSJ_U = #{cjsjU,jdbcType=TIME},
+      </if>
+      <if test="cjrUu != null">
+        CJR_UU = #{cjrUu,jdbcType=VARCHAR},
+      </if>
+      <if test="whrqU != null">
+        WHRQ_U = #{whrqU,jdbcType=DATE},
+      </if>
+      <if test="whsjU != null">
+        WHSJ_U = #{whsjU,jdbcType=TIME},
+      </if>
+      <if test="whrUu != null">
+        WHR_UU = #{whrUu,jdbcType=VARCHAR},
+      </if>
+      <if test="sjcUu != null">
+        SJC_UU = #{sjcUu,jdbcType=TIMESTAMP},
+      </if>
+      <if test="jlztU != null">
+        JLZT_U = #{jlztU,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where FRDM_U = #{frdmU,jdbcType=VARCHAR}
+      and CPBH_U = #{cpbhU,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="Model.CCPSX">
+    update ccpsx
+    set CPMC_U = #{cpmcU,jdbcType=VARCHAR},
+      JFZQ_U = #{jfzqU,jdbcType=VARCHAR},
+      QJJE_U = #{qjjeU,jdbcType=DECIMAL},
+      XZKHJB = #{xzkhjb,jdbcType=VARCHAR},
+      BZXX_U = #{bzxxU,jdbcType=VARCHAR},
+      CJRQ_U = #{cjrqU,jdbcType=DATE},
+      CJSJ_U = #{cjsjU,jdbcType=TIME},
+      CJR_UU = #{cjrUu,jdbcType=VARCHAR},
+      WHRQ_U = #{whrqU,jdbcType=DATE},
+      WHSJ_U = #{whsjU,jdbcType=TIME},
+      WHR_UU = #{whrUu,jdbcType=VARCHAR},
+      SJC_UU = #{sjcUu,jdbcType=TIMESTAMP},
+      JLZT_U = #{jlztU,jdbcType=VARCHAR}
+    where FRDM_U = #{frdmU,jdbcType=VARCHAR}
+      and CPBH_U = #{cpbhU,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="Model.CCPSX">
+    <id column="FRDM_U" jdbcType="VARCHAR" property="frdmU" />
+    <id column="CPBH_U" jdbcType="VARCHAR" property="cpbhU" />
+    <result column="CPMC_U" jdbcType="VARCHAR" property="cpmcU" />
+    <result column="JFZQ_U" jdbcType="VARCHAR" property="jfzqU" />
+    <result column="QJJE_U" jdbcType="DECIMAL" property="qjjeU" />
+    <result column="XZKHJB" jdbcType="VARCHAR" property="xzkhjb" />
+    <result column="BZXX_U" jdbcType="VARCHAR" property="bzxxU" />
+    <result column="CJRQ_U" jdbcType="DATE" property="cjrqU" />
+    <result column="CJSJ_U" jdbcType="TIME" property="cjsjU" />
+    <result column="CJR_UU" jdbcType="VARCHAR" property="cjrUu" />
+    <result column="WHRQ_U" jdbcType="DATE" property="whrqU" />
+    <result column="WHSJ_U" jdbcType="TIME" property="whsjU" />
+    <result column="WHR_UU" jdbcType="VARCHAR" property="whrUu" />
+    <result column="SJC_UU" jdbcType="TIMESTAMP" property="sjcUu" />
+    <result column="JLZT_U" jdbcType="VARCHAR" property="jlztU" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    FRDM_U, CPBH_U, CPMC_U, JFZQ_U, QJJE_U, XZKHJB, BZXX_U, CJRQ_U, CJSJ_U, CJR_UU, WHRQ_U, 
+    WHSJ_U, WHR_UU, SJC_UU, JLZT_U
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="Model.CCPSXKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ccpsx
+    where FRDM_U = #{frdmU,jdbcType=VARCHAR}
+      and CPBH_U = #{cpbhU,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="Model.CCPSXKey">
+    delete from ccpsx
+    where FRDM_U = #{frdmU,jdbcType=VARCHAR}
+      and CPBH_U = #{cpbhU,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="Model.CCPSX">
+    insert into ccpsx (FRDM_U, CPBH_U, CPMC_U, 
+      JFZQ_U, QJJE_U, XZKHJB, 
+      BZXX_U, CJRQ_U, CJSJ_U, CJR_UU, 
+      WHRQ_U, WHSJ_U, WHR_UU, SJC_UU, 
+      JLZT_U)
+    values (#{frdmU,jdbcType=VARCHAR}, #{cpbhU,jdbcType=VARCHAR}, #{cpmcU,jdbcType=VARCHAR}, 
+      #{jfzqU,jdbcType=VARCHAR}, #{qjjeU,jdbcType=DECIMAL}, #{xzkhjb,jdbcType=VARCHAR}, 
+      #{bzxxU,jdbcType=VARCHAR}, #{cjrqU,jdbcType=DATE}, #{cjsjU,jdbcType=TIME}, #{cjrUu,jdbcType=VARCHAR}, 
+      #{whrqU,jdbcType=DATE}, #{whsjU,jdbcType=TIME}, #{whrUu,jdbcType=VARCHAR}, #{sjcUu,jdbcType=TIMESTAMP}, 
+      #{jlztU,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="Model.CCPSX">
+    insert into ccpsx
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="frdmU != null">
+        FRDM_U,
+      </if>
+      <if test="cpbhU != null">
+        CPBH_U,
+      </if>
+      <if test="cpmcU != null">
+        CPMC_U,
+      </if>
+      <if test="jfzqU != null">
+        JFZQ_U,
+      </if>
+      <if test="qjjeU != null">
+        QJJE_U,
+      </if>
+      <if test="xzkhjb != null">
+        XZKHJB,
+      </if>
+      <if test="bzxxU != null">
+        BZXX_U,
+      </if>
+      <if test="cjrqU != null">
+        CJRQ_U,
+      </if>
+      <if test="cjsjU != null">
+        CJSJ_U,
+      </if>
+      <if test="cjrUu != null">
+        CJR_UU,
+      </if>
+      <if test="whrqU != null">
+        WHRQ_U,
+      </if>
+      <if test="whsjU != null">
+        WHSJ_U,
+      </if>
+      <if test="whrUu != null">
+        WHR_UU,
+      </if>
+      <if test="sjcUu != null">
+        SJC_UU,
+      </if>
+      <if test="jlztU != null">
+        JLZT_U,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="frdmU != null">
+        #{frdmU,jdbcType=VARCHAR},
+      </if>
+      <if test="cpbhU != null">
+        #{cpbhU,jdbcType=VARCHAR},
+      </if>
+      <if test="cpmcU != null">
+        #{cpmcU,jdbcType=VARCHAR},
+      </if>
+      <if test="jfzqU != null">
+        #{jfzqU,jdbcType=VARCHAR},
+      </if>
+      <if test="qjjeU != null">
+        #{qjjeU,jdbcType=DECIMAL},
+      </if>
+      <if test="xzkhjb != null">
+        #{xzkhjb,jdbcType=VARCHAR},
+      </if>
+      <if test="bzxxU != null">
+        #{bzxxU,jdbcType=VARCHAR},
+      </if>
+      <if test="cjrqU != null">
+        #{cjrqU,jdbcType=DATE},
+      </if>
+      <if test="cjsjU != null">
+        #{cjsjU,jdbcType=TIME},
+      </if>
+      <if test="cjrUu != null">
+        #{cjrUu,jdbcType=VARCHAR},
+      </if>
+      <if test="whrqU != null">
+        #{whrqU,jdbcType=DATE},
+      </if>
+      <if test="whsjU != null">
+        #{whsjU,jdbcType=TIME},
+      </if>
+      <if test="whrUu != null">
+        #{whrUu,jdbcType=VARCHAR},
+      </if>
+      <if test="sjcUu != null">
+        #{sjcUu,jdbcType=TIMESTAMP},
+      </if>
+      <if test="jlztU != null">
+        #{jlztU,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="Model.CCPSX">
+    update ccpsx
+    <set>
+      <if test="cpmcU != null">
+        CPMC_U = #{cpmcU,jdbcType=VARCHAR},
+      </if>
+      <if test="jfzqU != null">
+        JFZQ_U = #{jfzqU,jdbcType=VARCHAR},
+      </if>
+      <if test="qjjeU != null">
+        QJJE_U = #{qjjeU,jdbcType=DECIMAL},
+      </if>
+      <if test="xzkhjb != null">
+        XZKHJB = #{xzkhjb,jdbcType=VARCHAR},
+      </if>
+      <if test="bzxxU != null">
+        BZXX_U = #{bzxxU,jdbcType=VARCHAR},
+      </if>
+      <if test="cjrqU != null">
+        CJRQ_U = #{cjrqU,jdbcType=DATE},
+      </if>
+      <if test="cjsjU != null">
+        CJSJ_U = #{cjsjU,jdbcType=TIME},
+      </if>
+      <if test="cjrUu != null">
+        CJR_UU = #{cjrUu,jdbcType=VARCHAR},
+      </if>
+      <if test="whrqU != null">
+        WHRQ_U = #{whrqU,jdbcType=DATE},
+      </if>
+      <if test="whsjU != null">
+        WHSJ_U = #{whsjU,jdbcType=TIME},
+      </if>
+      <if test="whrUu != null">
+        WHR_UU = #{whrUu,jdbcType=VARCHAR},
+      </if>
+      <if test="sjcUu != null">
+        SJC_UU = #{sjcUu,jdbcType=TIMESTAMP},
+      </if>
+      <if test="jlztU != null">
+        JLZT_U = #{jlztU,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where FRDM_U = #{frdmU,jdbcType=VARCHAR}
+      and CPBH_U = #{cpbhU,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="Model.CCPSX">
+    update ccpsx
+    set CPMC_U = #{cpmcU,jdbcType=VARCHAR},
+      JFZQ_U = #{jfzqU,jdbcType=VARCHAR},
+      QJJE_U = #{qjjeU,jdbcType=DECIMAL},
+      XZKHJB = #{xzkhjb,jdbcType=VARCHAR},
+      BZXX_U = #{bzxxU,jdbcType=VARCHAR},
+      CJRQ_U = #{cjrqU,jdbcType=DATE},
+      CJSJ_U = #{cjsjU,jdbcType=TIME},
+      CJR_UU = #{cjrUu,jdbcType=VARCHAR},
+      WHRQ_U = #{whrqU,jdbcType=DATE},
+      WHSJ_U = #{whsjU,jdbcType=TIME},
+      WHR_UU = #{whrUu,jdbcType=VARCHAR},
+      SJC_UU = #{sjcUu,jdbcType=TIMESTAMP},
+      JLZT_U = #{jlztU,jdbcType=VARCHAR}
+    where FRDM_U = #{frdmU,jdbcType=VARCHAR}
+      and CPBH_U = #{cpbhU,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="cn.bjut.entity.CCPSX">
+    <id column="FRDM_U" jdbcType="VARCHAR" property="frdmU" />
+    <id column="CPBH_U" jdbcType="VARCHAR" property="cpbhU" />
+    <result column="CPMC_U" jdbcType="VARCHAR" property="cpmcU" />
+    <result column="JFZQ_U" jdbcType="VARCHAR" property="jfzqU" />
+    <result column="QJJE_U" jdbcType="DECIMAL" property="qjjeU" />
+    <result column="XZKHJB" jdbcType="VARCHAR" property="xzkhjb" />
+    <result column="BZXX_U" jdbcType="VARCHAR" property="bzxxU" />
+    <result column="CJRQ_U" jdbcType="DATE" property="cjrqU" />
+    <result column="CJSJ_U" jdbcType="TIME" property="cjsjU" />
+    <result column="CJR_UU" jdbcType="VARCHAR" property="cjrUu" />
+    <result column="WHRQ_U" jdbcType="DATE" property="whrqU" />
+    <result column="WHSJ_U" jdbcType="TIME" property="whsjU" />
+    <result column="WHR_UU" jdbcType="VARCHAR" property="whrUu" />
+    <result column="SJC_UU" jdbcType="TIMESTAMP" property="sjcUu" />
+    <result column="JLZT_U" jdbcType="VARCHAR" property="jlztU" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    FRDM_U, CPBH_U, CPMC_U, JFZQ_U, QJJE_U, XZKHJB, BZXX_U, CJRQ_U, CJSJ_U, CJR_UU, WHRQ_U, 
+    WHSJ_U, WHR_UU, SJC_UU, JLZT_U
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="cn.bjut.entity.CCPSXKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ccpsx
+    where FRDM_U = #{frdmU,jdbcType=VARCHAR}
+      and CPBH_U = #{cpbhU,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="cn.bjut.entity.CCPSXKey">
+    delete from ccpsx
+    where FRDM_U = #{frdmU,jdbcType=VARCHAR}
+      and CPBH_U = #{cpbhU,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.bjut.entity.CCPSX">
+    insert into ccpsx (FRDM_U, CPBH_U, CPMC_U, 
+      JFZQ_U, QJJE_U, XZKHJB, 
+      BZXX_U, CJRQ_U, CJSJ_U, CJR_UU, 
+      WHRQ_U, WHSJ_U, WHR_UU, SJC_UU, 
+      JLZT_U)
+    values (#{frdmU,jdbcType=VARCHAR}, #{cpbhU,jdbcType=VARCHAR}, #{cpmcU,jdbcType=VARCHAR}, 
+      #{jfzqU,jdbcType=VARCHAR}, #{qjjeU,jdbcType=DECIMAL}, #{xzkhjb,jdbcType=VARCHAR}, 
+      #{bzxxU,jdbcType=VARCHAR}, #{cjrqU,jdbcType=DATE}, #{cjsjU,jdbcType=TIME}, #{cjrUu,jdbcType=VARCHAR}, 
+      #{whrqU,jdbcType=DATE}, #{whsjU,jdbcType=TIME}, #{whrUu,jdbcType=VARCHAR}, #{sjcUu,jdbcType=TIMESTAMP}, 
+      #{jlztU,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.bjut.entity.CCPSX">
+    insert into ccpsx
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="frdmU != null">
+        FRDM_U,
+      </if>
+      <if test="cpbhU != null">
+        CPBH_U,
+      </if>
+      <if test="cpmcU != null">
+        CPMC_U,
+      </if>
+      <if test="jfzqU != null">
+        JFZQ_U,
+      </if>
+      <if test="qjjeU != null">
+        QJJE_U,
+      </if>
+      <if test="xzkhjb != null">
+        XZKHJB,
+      </if>
+      <if test="bzxxU != null">
+        BZXX_U,
+      </if>
+      <if test="cjrqU != null">
+        CJRQ_U,
+      </if>
+      <if test="cjsjU != null">
+        CJSJ_U,
+      </if>
+      <if test="cjrUu != null">
+        CJR_UU,
+      </if>
+      <if test="whrqU != null">
+        WHRQ_U,
+      </if>
+      <if test="whsjU != null">
+        WHSJ_U,
+      </if>
+      <if test="whrUu != null">
+        WHR_UU,
+      </if>
+      <if test="sjcUu != null">
+        SJC_UU,
+      </if>
+      <if test="jlztU != null">
+        JLZT_U,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="frdmU != null">
+        #{frdmU,jdbcType=VARCHAR},
+      </if>
+      <if test="cpbhU != null">
+        #{cpbhU,jdbcType=VARCHAR},
+      </if>
+      <if test="cpmcU != null">
+        #{cpmcU,jdbcType=VARCHAR},
+      </if>
+      <if test="jfzqU != null">
+        #{jfzqU,jdbcType=VARCHAR},
+      </if>
+      <if test="qjjeU != null">
+        #{qjjeU,jdbcType=DECIMAL},
+      </if>
+      <if test="xzkhjb != null">
+        #{xzkhjb,jdbcType=VARCHAR},
+      </if>
+      <if test="bzxxU != null">
+        #{bzxxU,jdbcType=VARCHAR},
+      </if>
+      <if test="cjrqU != null">
+        #{cjrqU,jdbcType=DATE},
+      </if>
+      <if test="cjsjU != null">
+        #{cjsjU,jdbcType=TIME},
+      </if>
+      <if test="cjrUu != null">
+        #{cjrUu,jdbcType=VARCHAR},
+      </if>
+      <if test="whrqU != null">
+        #{whrqU,jdbcType=DATE},
+      </if>
+      <if test="whsjU != null">
+        #{whsjU,jdbcType=TIME},
+      </if>
+      <if test="whrUu != null">
+        #{whrUu,jdbcType=VARCHAR},
+      </if>
+      <if test="sjcUu != null">
+        #{sjcUu,jdbcType=TIMESTAMP},
+      </if>
+      <if test="jlztU != null">
+        #{jlztU,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.bjut.entity.CCPSX">
+    update ccpsx
+    <set>
+      <if test="cpmcU != null">
+        CPMC_U = #{cpmcU,jdbcType=VARCHAR},
+      </if>
+      <if test="jfzqU != null">
+        JFZQ_U = #{jfzqU,jdbcType=VARCHAR},
+      </if>
+      <if test="qjjeU != null">
+        QJJE_U = #{qjjeU,jdbcType=DECIMAL},
+      </if>
+      <if test="xzkhjb != null">
+        XZKHJB = #{xzkhjb,jdbcType=VARCHAR},
+      </if>
+      <if test="bzxxU != null">
+        BZXX_U = #{bzxxU,jdbcType=VARCHAR},
+      </if>
+      <if test="cjrqU != null">
+        CJRQ_U = #{cjrqU,jdbcType=DATE},
+      </if>
+      <if test="cjsjU != null">
+        CJSJ_U = #{cjsjU,jdbcType=TIME},
+      </if>
+      <if test="cjrUu != null">
+        CJR_UU = #{cjrUu,jdbcType=VARCHAR},
+      </if>
+      <if test="whrqU != null">
+        WHRQ_U = #{whrqU,jdbcType=DATE},
+      </if>
+      <if test="whsjU != null">
+        WHSJ_U = #{whsjU,jdbcType=TIME},
+      </if>
+      <if test="whrUu != null">
+        WHR_UU = #{whrUu,jdbcType=VARCHAR},
+      </if>
+      <if test="sjcUu != null">
+        SJC_UU = #{sjcUu,jdbcType=TIMESTAMP},
+      </if>
+      <if test="jlztU != null">
+        JLZT_U = #{jlztU,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where FRDM_U = #{frdmU,jdbcType=VARCHAR}
+      and CPBH_U = #{cpbhU,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.bjut.entity.CCPSX">
+    update ccpsx
+    set CPMC_U = #{cpmcU,jdbcType=VARCHAR},
+      JFZQ_U = #{jfzqU,jdbcType=VARCHAR},
+      QJJE_U = #{qjjeU,jdbcType=DECIMAL},
+      XZKHJB = #{xzkhjb,jdbcType=VARCHAR},
+      BZXX_U = #{bzxxU,jdbcType=VARCHAR},
+      CJRQ_U = #{cjrqU,jdbcType=DATE},
+      CJSJ_U = #{cjsjU,jdbcType=TIME},
+      CJR_UU = #{cjrUu,jdbcType=VARCHAR},
+      WHRQ_U = #{whrqU,jdbcType=DATE},
+      WHSJ_U = #{whsjU,jdbcType=TIME},
+      WHR_UU = #{whrUu,jdbcType=VARCHAR},
+      SJC_UU = #{sjcUu,jdbcType=TIMESTAMP},
+      JLZT_U = #{jlztU,jdbcType=VARCHAR}
+    where FRDM_U = #{frdmU,jdbcType=VARCHAR}
+      and CPBH_U = #{cpbhU,jdbcType=VARCHAR}
+  </update>
+</mapper>
