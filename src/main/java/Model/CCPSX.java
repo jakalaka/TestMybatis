@@ -3,133 +3,133 @@ package Model;
 import java.util.Date;
 
 public class CCPSX extends CCPSXKey {
-    private String cpmcU;
+    private String CPMC_U;
 
-    private String jfzqU;
+    private String JFZQ_U;
 
-    private Long qjjeU;
+    private Long QJJE_U;
 
-    private String xzkhjb;
+    private String XZKHJB;
 
-    private String bzxxU;
+    private String BZXX_U;
 
-    private Date cjrqU;
+    private Date CJRQ_U;
 
-    private Date cjsjU;
+    private Date CJSJ_U;
 
-    private String cjrUu;
+    private String CJR_UU;
 
-    private Date whrqU;
+    private Date WHRQ_U;
 
-    private Date whsjU;
+    private Date WHSJ_U;
 
-    private String whrUu;
+    private String WHR_UU;
 
-    private Date sjcUu;
+    private Date SJC_UU;
 
-    private String jlztU;
+    private String JLZT_U;
 
-    public String getCpmcU() {
-        return cpmcU;
+    public String getCPMC_U() {
+        return CPMC_U;
     }
 
-    public void setCpmcU(String cpmcU) {
-        this.cpmcU = cpmcU == null ? null : cpmcU.trim();
+    public void setCPMC_U(String CPMC_U) {
+        this.CPMC_U = CPMC_U;
     }
 
-    public String getJfzqU() {
-        return jfzqU;
+    public String getJFZQ_U() {
+        return JFZQ_U;
     }
 
-    public void setJfzqU(String jfzqU) {
-        this.jfzqU = jfzqU == null ? null : jfzqU.trim();
+    public void setJFZQ_U(String JFZQ_U) {
+        this.JFZQ_U = JFZQ_U;
     }
 
-    public Long getQjjeU() {
-        return qjjeU;
+    public Long getQJJE_U() {
+        return QJJE_U;
     }
 
-    public void setQjjeU(Long qjjeU) {
-        this.qjjeU = qjjeU;
+    public void setQJJE_U(Long QJJE_U) {
+        this.QJJE_U = QJJE_U;
     }
 
-    public String getXzkhjb() {
-        return xzkhjb;
+    public String getXZKHJB() {
+        return XZKHJB;
     }
 
-    public void setXzkhjb(String xzkhjb) {
-        this.xzkhjb = xzkhjb == null ? null : xzkhjb.trim();
+    public void setXZKHJB(String XZKHJB) {
+        this.XZKHJB = XZKHJB;
     }
 
-    public String getBzxxU() {
-        return bzxxU;
+    public String getBZXX_U() {
+        return BZXX_U;
     }
 
-    public void setBzxxU(String bzxxU) {
-        this.bzxxU = bzxxU == null ? null : bzxxU.trim();
+    public void setBZXX_U(String BZXX_U) {
+        this.BZXX_U = BZXX_U;
     }
 
-    public Date getCjrqU() {
-        return cjrqU;
+    public Date getCJRQ_U() {
+        return CJRQ_U;
     }
 
-    public void setCjrqU(Date cjrqU) {
-        this.cjrqU = cjrqU;
+    public void setCJRQ_U(Date CJRQ_U) {
+        this.CJRQ_U = CJRQ_U;
     }
 
-    public Date getCjsjU() {
-        return cjsjU;
+    public Date getCJSJ_U() {
+        return CJSJ_U;
     }
 
-    public void setCjsjU(Date cjsjU) {
-        this.cjsjU = cjsjU;
+    public void setCJSJ_U(Date CJSJ_U) {
+        this.CJSJ_U = CJSJ_U;
     }
 
-    public String getCjrUu() {
-        return cjrUu;
+    public String getCJR_UU() {
+        return CJR_UU;
     }
 
-    public void setCjrUu(String cjrUu) {
-        this.cjrUu = cjrUu == null ? null : cjrUu.trim();
+    public void setCJR_UU(String CJR_UU) {
+        this.CJR_UU = CJR_UU;
     }
 
-    public Date getWhrqU() {
-        return whrqU;
+    public Date getWHRQ_U() {
+        return WHRQ_U;
     }
 
-    public void setWhrqU(Date whrqU) {
-        this.whrqU = whrqU;
+    public void setWHRQ_U(Date WHRQ_U) {
+        this.WHRQ_U = WHRQ_U;
     }
 
-    public Date getWhsjU() {
-        return whsjU;
+    public Date getWHSJ_U() {
+        return WHSJ_U;
     }
 
-    public void setWhsjU(Date whsjU) {
-        this.whsjU = whsjU;
+    public void setWHSJ_U(Date WHSJ_U) {
+        this.WHSJ_U = WHSJ_U;
     }
 
-    public String getWhrUu() {
-        return whrUu;
+    public String getWHR_UU() {
+        return WHR_UU;
     }
 
-    public void setWhrUu(String whrUu) {
-        this.whrUu = whrUu == null ? null : whrUu.trim();
+    public void setWHR_UU(String WHR_UU) {
+        this.WHR_UU = WHR_UU;
     }
 
-    public Date getSjcUu() {
-        return sjcUu;
+    public Date getSJC_UU() {
+        return SJC_UU;
     }
 
-    public void setSjcUu(Date sjcUu) {
-        this.sjcUu = sjcUu;
+    public void setSJC_UU(Date SJC_UU) {
+        this.SJC_UU = SJC_UU;
     }
 
-    public String getJlztU() {
-        return jlztU;
+    public String getJLZT_U() {
+        return JLZT_U;
     }
 
-    public void setJlztU(String jlztU) {
-        this.jlztU = jlztU == null ? null : jlztU.trim();
+    public void setJLZT_U(String JLZT_U) {
+        this.JLZT_U = JLZT_U;
     }
 }

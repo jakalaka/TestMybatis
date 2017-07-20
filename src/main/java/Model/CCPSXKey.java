@@ -1,23 +1,23 @@
 package Model;
 
 public class CCPSXKey {
-    private String frdmU;
+    private String FRDM_U;
 
-    private String cpbhU;
+    private String CPBH_U;
 
-    public String getFrdmU() {
-        return frdmU;
+    public String getFRDM_U() {
+        return FRDM_U;
     }
 
-    public void setFrdmU(String frdmU) {
-        this.frdmU = frdmU == null ? null : frdmU.trim();
+    public void setFRDM_U(String FRDM_U) {
+        this.FRDM_U = FRDM_U;
     }
 
-    public String getCpbhU() {
-        return cpbhU;
+    public String getCPBH_U() {
+        return CPBH_U;
     }
 
-    public void setCpbhU(String cpbhU) {
-        this.cpbhU = cpbhU == null ? null : cpbhU.trim();
+    public void setCPBH_U(String CPBH_U) {
+        this.CPBH_U = CPBH_U;
     }
 }
