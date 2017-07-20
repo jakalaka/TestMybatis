@@ -7,6 +7,13 @@
     <groupId>XQBH</groupId>
     <artifactId>TestMybatis</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+    </dependencies>
 
 
 </project>
